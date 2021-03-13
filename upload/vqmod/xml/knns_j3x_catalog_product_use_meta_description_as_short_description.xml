@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<modification
+		xmlns="https://github.com/vqmod/vqmod"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="https://github.com/vqmod/vqmod https://raw.githubusercontent.com/vqmod/vqmod/master/vqmod.xsd"
+		>
+		<id><![CDATA[[VQMOD] Journal3: Use "Meta Description" as "Short Description" under product title in product page]]></id>
+		<version>0.1.0</version>
+		<vqmver>2.6.3</vqmver>
+		<author>kanenas.net (aka Nikolas Branis) - nbran@kanenas.net</author>
+		<file path="catalog/controller/product/" name="product.php" error="log">
+			<operation error="skip">
+				<search position="before"><![CDATA[$data['text_select'] = $this->language->get('text_select');]]></search>
+				<add><![CDATA[			$data['custom_short_description'] = $product_info['meta_description'];]]></add>
+			</operation>
+		</file>
+		<file path="catalog/view/theme/journal3/template/product/" name="product.tpl" error="log">
+			<operation error="skip">
+				<search position="after"><![CDATA[<div class="title page-title"><?php echo $heading_title; ?></div>]]></search>
+				<add><![CDATA[            <div class="knns-short-description"><?php echo $custom_short_description; ?></div>]]></add>
+			</operation>
+		</file>
+	</modification>
