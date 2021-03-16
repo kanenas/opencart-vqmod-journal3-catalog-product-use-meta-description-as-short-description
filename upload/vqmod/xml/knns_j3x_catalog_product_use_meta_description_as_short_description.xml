@@ -6,7 +6,7 @@
 		>
 		<id><![CDATA[[VQMOD] Journal3: Use "Meta Description" as "Short Description" under product title in product page]]></id>
 		<version>0.1.0</version>
-		<vqmver>2.6.3</vqmver>
+		<vqmver>2.6.4</vqmver>
 		<author>kanenas.net (aka Nikolas Branis) - nbran@kanenas.net</author>
 		<file path="catalog/controller/product/" name="product.php" error="log">
 			<operation error="skip">
